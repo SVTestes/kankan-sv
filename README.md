@@ -1,46 +1,82 @@
-# Getting Started with Create React App
+# Aplicativo Kanban
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Um aplicativo de gerenciamento de tarefas estilo Kanban desenvolvido com React, TypeScript e Material UI.
 
-## Available Scripts
+## Funcionalidades
 
-In the project directory, you can run:
+- **Tarefas completas**:
+  - Criar tarefas simples ou detalhadas
+  - Editar tarefas existentes
+  - Definir prioridades (baixa, média, alta)
+  - Adicionar datas de vencimento
+  - Incluir descrições
+  - Adicionar etiquetas personalizadas
+  - Excluir tarefas
 
-### `npm start`
+- **Colunas gerenciáveis**:
+  - Criar novas colunas
+  - Editar o título das colunas
+  - Excluir colunas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Funcionalidade de arrastar e soltar**:
+  - Mover tarefas entre colunas
+  - Reordenar tarefas dentro da mesma coluna
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Filtros e pesquisa**:
+  - Pesquisar tarefas por texto
+  - Filtrar por prioridade
+  - Filtrar por etiquetas
 
-### `npm test`
+- **Persistência de dados**:
+  - Salvar automaticamente no localStorage
+  - Exportar dados como JSON
+  - Importar dados de arquivos JSON
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Como iniciar o aplicativo
 
-### `npm run build`
+### No Windows PowerShell
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Como o PowerShell não aceita o operador && para encadear comandos, você pode usar o script PowerShell incluído:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```powershell
+# Navegue para o diretório do projeto (se ainda não estiver nele)
+cd kanban
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Execute o script PowerShell
+.\start.ps1
+```
 
-### `npm run eject`
+Ou execute diretamente:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```powershell
+cd kanban
+npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### No Prompt de Comando ou terminal bash/zsh
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+cd kanban && npm start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Tecnologias utilizadas
 
-## Learn More
+- React
+- TypeScript
+- Material UI
+- React Beautiful DnD (arrastar e soltar)
+- Context API para gerenciamento de estado
+- LocalStorage para persistência de dados
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Estrutura do projeto
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `/src/components`: Componentes React
+- `/src/context`: Contexto e lógica de estado (KanbanContext)
+- `/src/types`: Interfaces TypeScript
+
+## Próximos passos
+
+- Adicionar autenticação de usuários
+- Backend para persistência de dados
+- Funcionalidade de compartilhamento
+- Anexos de arquivos
